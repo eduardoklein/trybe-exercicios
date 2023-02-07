@@ -101,15 +101,27 @@
 
 
       const h3Primeiro = document.createElement('h3');
+      h3Primeiro.classList.add('title', 'description');
       const h3Segundo = document.createElement('h3');
+      h3Segundo.classList.add('description');
       const h3Terceiro = document.createElement('h3');
-      h3Primeiro.innerText = 'teste';
-      h3Segundo.innerText = 'teste';
-      h3Terceiro.innerText = 'teste';
+      h3Terceiro.classList.add('description');
+      h3Primeiro.innerText = 'Teste';
+      h3Segundo.innerText = 'Teste';
+      h3Terceiro.innerText = 'Teste';
       main.appendChild(h3Primeiro);
       main.appendChild(h3Segundo);
       main.appendChild(h3Terceiro);
      
+      main.removeChild(sectionLeft);
+
+      sectionRight.style.marginRight = 'auto';
+
+      document.querySelector('.center-content').parentNode.style.backgroundColor = 'green';
+
+      for (index = 0; index <= 1; index += 1){
+        ul.removeChild(ul.lastChild);
+      }
 
     </script>
   </body>
